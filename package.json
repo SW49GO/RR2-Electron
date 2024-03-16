@@ -1,0 +1,14 @@
+{
+  "name": "rr2-electron",
+  "version": "1.0.0",
+  "description": "Manage Players",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SW49GO",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^29.1.4"
+  }
+}

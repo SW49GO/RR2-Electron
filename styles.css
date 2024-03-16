@@ -1,0 +1,426 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(89, 111, 161);
+}
+label {
+  display: block;
+  color: brown;
+  margin: 10px;
+  font-weight: 900;
+  font-size: 20px;
+}
+input {
+  border: none;
+}
+.principal {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: rgb(89, 111, 161);
+}
+.container {
+  margin-top: 320px;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
+.barre {
+  width: 100%;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(89, 111, 161);
+  margin-left: 28px;
+  margin-right: 24px;
+}
+.navbar li {
+  margin: 10px;
+}
+button {
+  border: none;
+}
+.btn,
+.btn_imp {
+  border: 0px;
+  background-color: transparent;
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+  color: brown;
+  width: 240px;
+  height: 70px;
+  background-image: url('pictures/bouton.png');
+  background-size: cover;
+}
+
+select,
+option {
+  font-size: 15px;
+}
+
+#name,
+#crane {
+  height: 30px;
+  width: 200px;
+}
+.newCrane {
+  width: 55px;
+  height: 30px;
+}
+.newPlayer {
+  height: 30px;
+}
+/**********Affichage Données********/
+
+.player {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  align-items: center;
+  margin-left: 15px;
+  width: 97%;
+  height: 100px;
+  background-image: url(pictures/membre.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.crane {
+  color: rgb(171, 218, 224);
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 0px;
+  margin-top: 5px;
+}
+.grade {
+  display: flex;
+  align-items: center;
+  width: 270px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+.name {
+  width: 170px;
+  font-weight: bold;
+  line-height: 80px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 10px;
+  font-size: 26px;
+  color: white;
+}
+.status {
+  width: 200px;
+  height: 35px;
+  margin-top: 40px;
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: rgb(89, 111, 161);
+  border-color: white;
+}
+.soldat,
+.sergent,
+.general,
+.chef {
+  font-weight: bold;
+}
+.soldat {
+  color: white;
+}
+.sergent {
+  color: blue;
+}
+.general {
+  color: yellow;
+}
+.chef {
+  color: red;
+}
+.bonus {
+  width: 65px;
+
+  margin-top: 10px;
+}
+.insigne {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  margin-left: 150px;
+  margin-top: 10px;
+}
+.parametre {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.suppr {
+  position: absolute;
+  margin-top: 10px;
+  right: 40px;
+}
+.base,
+.tresor,
+.guerre {
+  position: relative;
+  margin-top: 2px;
+}
+.haut,
+.droite,
+.gauche {
+  position: absolute;
+  width: 20px;
+}
+.haut {
+  top: -11px;
+  left: 21px;
+}
+.droite {
+  right: -15px;
+  bottom: 0;
+}
+.gauche {
+  left: -15px;
+  bottom: 0;
+}
+/*************Div Configuration**************/
+.hidden {
+  display: none;
+}
+.show {
+  display: block;
+}
+.fleche {
+  width: 30px;
+  position: absolute;
+  top: -5px;
+  left: 27px;
+}
+.config {
+  position: absolute;
+  background-color: #9aadcd;
+  border: 9px solid #2c2e58;
+  width: 1100px;
+  height: 565px;
+  top: 93px;
+  z-index: 1;
+}
+.config > h1 {
+  position: absolute;
+  top: 15px;
+  left: 42px;
+  color: rgb(99, 39, 39);
+  border: 2px solid rgb(99, 39, 39);
+  padding: 8px;
+}
+.modif {
+  margin-top: 90px;
+}
+.modifStatus {
+  margin: 4px;
+}
+.modifCrane {
+  display: flex;
+  margin-left: 100px;
+}
+.modifNewCrane {
+  width: 55px;
+  margin: 5px;
+}
+.newInsigne {
+  display: flex;
+  justify-content: space-around;
+}
+.dim {
+  width: 100px;
+}
+.newConfig {
+  display: flex;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.allInsigne {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.insBase,
+.insTresor,
+.insGuerre {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.imgBase,
+.imgTresor,
+.imgGuerre {
+  text-align: center;
+}
+.perkBaseHaut,
+.perkTresorHaut,
+.perkGuerreHaut {
+  text-align: center;
+}
+
+.perkGauche {
+  margin-right: 90px;
+}
+input[name='checkBaseGauche'],
+input[name='checkTresorGauche'],
+input[name='checkGuerreGauche'] {
+  margin-right: 110px;
+}
+.acquisBase,
+.acquisTresor,
+.acquisGuerre {
+  margin: 20px;
+}
+input[name='checkbase'] {
+  color: red;
+}
+.titleBase {
+  margin: 20px;
+  color: brown;
+}
+.acquisBase span,
+.acquisTresor span,
+.acquisGuerre span {
+  padding-top: 10px;
+}
+.perkBasBase {
+  margin-left: 3px;
+}
+.perkBasTresor,
+.perkBasGuerre {
+  margin-left: 20px;
+}
+.changeConfig {
+  margin-top: 20px;
+  text-align: center;
+}
+.btn_change {
+  width: 160px;
+  height: 44px;
+  background-image: url('pictures/btnVert.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #9aadcd;
+}
+.fichTitle {
+  text-align: center;
+  margin: 20px;
+}
+#fichTab {
+  margin-top: 500px;
+}
+.tableau {
+  margin: 10px;
+}
+.tableau,
+th,
+tr,
+td {
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th {
+  background-color: rgb(28, 66, 168);
+}
+.tbase {
+  background-color: rgb(106, 208, 226);
+}
+.tbase1 {
+  background-color: rgb(153, 208, 218);
+}
+.ttresor {
+  background-color: rgb(231, 216, 81);
+}
+.ttresor1 {
+  background-color: rgb(228, 221, 164);
+}
+.tguerre {
+  background-color: rgb(204, 58, 58);
+}
+.tguerre1 {
+  background-color: rgb(196, 127, 127);
+}
+#imprim {
+  height: 30px;
+  width: 201px;
+  background-image: url(pictures/ongletF.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding-top: 8px;
+  color: brown;
+  font-weight: bold;
+}
+/**********NewWin****************/
+.btn_imp {
+  height: 50px;
+  width: 167px;
+  margin: 20 px;
+}
+@media print {
+  #imprimer {
+    color: transparent;
+  }
+  #fermer {
+    color: transparent;
+  }
+  th {
+    color: rgb(28, 66, 168);
+  }
+  .tbase {
+    color: rgb(15, 195, 226);
+  }
+  .tbase1 {
+    color: rgb(115, 201, 216);
+  }
+  .ttresor {
+    color: rgb(236, 213, 6);
+  }
+  .ttresor1 {
+    color: rgb(218, 201, 75);
+  }
+  .tguerre {
+    color: rgb(202, 7, 7);
+  }
+  .tguerre1 {
+    color: rgb(201, 49, 49);
+  }
+}
+.lien {
+  height: 50px;
+  text-align: center;
+  padding: 15px;
+}
+.btn_a {
+  text-decoration: none;
+  padding: 3px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.explication {
+  width: 550px;
+  margin: 10px;
+  color: white;
+  border: 1px solid brown;
+  padding: 10px;
+}
+.explication ul {
+  list-style: none;
+}

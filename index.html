@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <title>France 98</title>
+  </head>
+  <body>
+    <main>
+      <div class="principal">
+        <div class="logo">
+          <img src="pictures/logo.jpg" alt="logo" />
+        </div>
+        <nav class="navbar">
+          <img class="barre" src="pictures/barre.png" alt="barre" />
+          <ul>
+            <li>
+              <label>Nouveau Joueur:</label>
+              <input class="newPlayer" type="text" name="newPlayer" />
+            </li>
+            <li>
+              <label>Crâne</label>
+              <input class="newCrane" type="text" name="newCrane" />&ensp;%
+            </li>
+            <li>
+              <select class="status">
+                <option class="soldat" value="white">Soldat</option>
+                <option class="sergent" value="blue">Sergent</option>
+                <option class="general" value="yellow">General</option>
+                <option class="chef" value="red">Chef</option>
+              </select>
+            </li>
+            <li>
+              <button id="new" class="btn">AJOUTER</button>
+            </li>
+          </ul>
+          <div
+            id="imprim"
+            title="Base de données au démarrage, après modification, redémarrer l'application pour visualiser les changements"
+          >
+            Base de Données
+          </div>
+          <img class="barre" src="pictures/barre.png" alt="barre" />
+        </nav>
+      </div>
+      <div class="container" id="remonter"></div>
+      <div class="lien"><a class="btn btn_a" href="#remonter">Remonter</a></div>
+
+      <div id="fichTab" class="hidden">
+        <table class="tableau">
+          <tr>
+            <th>JOUEUR</th>
+            <th>GRADE</th>
+            <th>CRANE</th>
+            <th class="tbase">BASE</th>
+            <th class="tbase">Perk Haut</th>
+            <th class="tbase">Perk Droite</th>
+            <th class="tbase">Perk Gauche</th>
+            <th class="ttresor">TRESOR</th>
+            <th class="ttresor">Perk Haut</th>
+            <th class="ttresor">Perk Droite</th>
+            <th class="ttresor">Perk Gauche</th>
+            <th class="tguerre">GUERRE</th>
+            <th class="tguerre">Perk Haut</th>
+            <th class="tguerre">Perk Droite</th>
+            <th class="tguerre">Perk Gauche</th>
+          </tr>
+        </table>
+      </div>
+    </main>
+    <script src="renderer.js"></script>
+  </body>
+</html>
