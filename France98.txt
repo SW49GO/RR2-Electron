@@ -1,0 +1,1 @@
+{"name":"Bidule","grade":"blue","crane":"43","base":1,"tresor":0,"guerre":0,"bh":1,"bd":1,"bg":0,"th":0,"td":0,"tg":0,"gh":0,"gd":0,"gg":0}

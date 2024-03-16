@@ -1,14 +1,71 @@
 {
-  "name": "rr2-electron",
+  "name": "france98",
   "version": "1.0.0",
-  "description": "Manage Players",
+  "description": "Gestion Team FR98",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron .",
+    "dist": "electron-builder",
+    "watch": "nodemon --exec electron .",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "postinstall": "electron-builder install-app-deps"
   },
   "author": "SW49GO",
   "license": "ISC",
+  "build": {
+    "appId": "france98",
+    "win": {
+      "target": "nsis",
+      "icon": "./pictures/france.ico"
+    },
+    "extraResources": [
+      "./base/users.db"
+    ],
+    "asarUnpack": [
+      "./base/users.db"
+    ]
+  },
   "devDependencies": {
-    "electron": "^29.1.4"
+    "@electron-forge/cli": "^6.0.0-beta.68",
+    "@electron-forge/maker-deb": "^6.0.0-beta.68",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.68",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.68",
+    "@electron-forge/maker-zip": "^6.0.0-beta.68",
+    "concurrently": "^7.4.0",
+    "electron": "^21.1.1",
+    "electron-builder": "^23.6.0",
+    "electron-rebuild": "^3.2.9"
+  },
+  "dependencies": {
+    "electron-reload": "^2.0.0-alpha.1",
+    "sqlite3": "^5.1.2"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "fr98"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
   }
 }
